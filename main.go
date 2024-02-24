@@ -27,6 +27,7 @@ func main() {
 
 	err := http.ListenAndServe(":80", nil)
 	if err != nil {
+		println("Error starting server: ", err.Error())
 		return
 	}
 }
