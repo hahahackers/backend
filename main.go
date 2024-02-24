@@ -20,10 +20,12 @@ func chgk(w http.ResponseWriter, req *http.Request) {
 
 func main() {
 
+	println("Starting server on port 80")
+
 	http.HandleFunc("/ping", hello)
 	http.HandleFunc("/chgk/", chgk)
 
-	err := http.ListenAndServe(":8090", nil)
+	err := http.ListenAndServe(":80", nil)
 	if err != nil {
 		return
 	}
